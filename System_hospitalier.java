@@ -8,16 +8,19 @@ public class System_hospitalier {
     private List<Requête> listRequetes;
 
     private String analyserRequête(Requête requête) {
-       return "Diagnostic préliminaire : " + requête.getSymptomes().toString();
+        // Comparaison avec la base de connaissances médicales
+       return requête.getSymptomes().toString();
     }
     
-     private String comparerDonnées() {
-        return "Cluster trouvé avec " + this.listRequestes.size() + " cas similaires";
-    }
-    
+
     public System_hospitalier(List<Requête> listRequetes) {
         super();
         this.listRequetes = listRequetes;
+    }
+
+     private String comparerDonnées() {
+         // Retour des résultats de comparaison
+        return this.listRequestes.size();
     }
 
     public System_hospitalier() {
